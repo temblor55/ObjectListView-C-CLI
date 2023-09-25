@@ -1,0 +1,453 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly DropDownControls, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class BufferedPainting.BufferedPainter`1[TState]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: TState
+    Void .ctor(System.Windows.Forms.Control): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean BufferedPaintSupported 'get set' : 
+    System.Windows.Forms.Control Control 'get set' : 
+    Int32 DefaultDuration 'get set' : 
+    Boolean Enabled 'get set' : 
+    TState DefaultState 'get set' : 
+    System.Collections.Generic.ICollection`1[BufferedPainting.BufferedPaintTransition`1[TState]] Transitions 'get set' : 
+    System.Collections.Generic.ICollection`1[BufferedPainting.VisualStateTrigger`1[TState]] Triggers 'get set' : 
+    TState State 'get set' : 
+  Events:
+    System.EventHandler`1[BufferedPainting.BufferedPaintEventArgs`1[TState]] PaintVisualState: 
+  Methods:
+    add_PaintVisualState(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_PaintVisualState(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    get_BufferedPaintSupported(): PrivateScope, Public, HideBySig, SpecialName
+    get_Control(): PrivateScope, Public, HideBySig, SpecialName
+    get_DefaultDuration(): PrivateScope, Public, HideBySig, SpecialName
+    set_DefaultDuration(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Enabled(): PrivateScope, Public, HideBySig, SpecialName
+    set_Enabled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_DefaultState(): PrivateScope, Public, HideBySig, SpecialName
+    set_DefaultState(TState): PrivateScope, Public, HideBySig, SpecialName
+    get_Transitions(): PrivateScope, Public, HideBySig, SpecialName
+    get_Triggers(): PrivateScope, Public, HideBySig, SpecialName
+    get_State(): PrivateScope, Public, HideBySig, SpecialName
+    set_State(TState): PrivateScope, Public, HideBySig, SpecialName
+    AddTransition(TState, TState, Int32): PrivateScope, Public, HideBySig
+    AddTrigger(VisualStateTriggerTypes, TState, Rectangle(Optional, HasDefault), AnchorStyles(Optional, HasDefault)): PrivateScope, Public, HideBySig
+Class BufferedPainting.BufferedPaintTransition`1[TState]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: TState
+    Void .ctor(TState, TState, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IEquatable`1[BufferedPainting.BufferedPaintTransition`1[TState]]
+  Properties:
+    TState FromState 'get set' : 
+    TState ToState 'get set' : 
+    Int32 Duration 'get set' : 
+  Methods:
+    get_FromState(): PrivateScope, Public, HideBySig, SpecialName
+    get_ToState(): PrivateScope, Public, HideBySig, SpecialName
+    get_Duration(): PrivateScope, Public, HideBySig, SpecialName
+    set_Duration(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+Class BufferedPainting.VisualStateTrigger`1[TState]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: TState
+    Void .ctor(BufferedPainting.VisualStateTriggerTypes, TState, System.Drawing.Rectangle, System.Windows.Forms.AnchorStyles): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IEquatable`1[BufferedPainting.VisualStateTrigger`1[TState]]
+  Properties:
+    BufferedPainting.VisualStateTriggerTypes Type 'get set' : 
+    TState State 'get set' : 
+    System.Drawing.Rectangle Bounds 'get set' : 
+    System.Windows.Forms.AnchorStyles Anchor 'get set' : 
+  Methods:
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    get_State(): PrivateScope, Public, HideBySig, SpecialName
+    get_Bounds(): PrivateScope, Public, HideBySig, SpecialName
+    set_Bounds(Rectangle): PrivateScope, Public, HideBySig, SpecialName
+    get_Anchor(): PrivateScope, Public, HideBySig, SpecialName
+    set_Anchor(AnchorStyles): PrivateScope, Public, HideBySig, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+Struct BufferedPainting.VisualStateTriggerTypes: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    BufferedPainting.VisualStateTriggerTypes Focused = 0 : Public, Static, Literal, HasDefault
+    BufferedPainting.VisualStateTriggerTypes Hot = 1 : Public, Static, Literal, HasDefault
+    BufferedPainting.VisualStateTriggerTypes Pushed = 2 : Public, Static, Literal, HasDefault
+Class BufferedPainting.BufferedPaintEventArgs`1[TState]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: TState
+  :System.EventArgs
+    Void .ctor(TState, System.Drawing.Graphics): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TState State 'get set' : 
+    System.Drawing.Graphics Graphics 'get set' : 
+  Methods:
+    get_State(): PrivateScope, Public, HideBySig, SpecialName
+    get_Graphics(): PrivateScope, Public, HideBySig, SpecialName
+Class DropDownControlBase: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean DrawWithVisualStyles 'get set' : 
+    Boolean DroppedDown 'get set' : 
+    System.Drawing.Color BackColor 'get set' : 
+    System.Drawing.Image BackgroundImage 'get set' : 
+    System.Windows.Forms.ImageLayout BackgroundImageLayout 'get set' : 
+  Events:
+    System.EventHandler DropDown: 
+    System.EventHandler DropDownClosed: 
+    System.EventHandler`1[DropDownPaintEventArgs] PaintContent: 
+  Methods:
+    get_DrawWithVisualStyles(): PrivateScope, Public, HideBySig, SpecialName
+    set_DrawWithVisualStyles(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_DroppedDown(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DroppedDown(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BackColor(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_BackColor(Color): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_BackgroundImage(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_BackgroundImage(Image): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_BackgroundImageLayout(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_BackgroundImageLayout(ImageLayout): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    add_DropDown(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_DropDown(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_DropDownClosed(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_DropDownClosed(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_PaintContent(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_PaintContent(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+Class ComboTreeBox: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DropDownControlBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Collections.Generic.IEnumerable`1[ComboTreeNode] AllNodes 'get ' : 
+    Boolean CascadeCheckState 'get set' : 
+    System.Collections.Generic.IEnumerable`1[ComboTreeNode] CheckedNodes 'get set' : 
+    System.String CheckedNodeSeparator 'get set' : 
+    Int32 DropDownHeight 'get set' : 
+    Int32 DropDownWidth 'get set' : 
+    Boolean DroppedDown 'get set' : 
+    Int32 ExpandedImageIndex 'get set' : 
+    System.String ExpandedImageKey 'get set' : 
+    Int32 ImageIndex 'get set' : 
+    System.String ImageKey 'get set' : 
+    System.Windows.Forms.ImageList Images 'get set' : 
+    ComboTreeNodeCollection Nodes 'get set' : 
+    System.String NullValue 'get set' : 
+    System.String Path 'get set' : 
+    System.String PathSeparator 'get set' : 
+    ComboTreeNode SelectedNode 'get set' : 
+    Boolean ShowCheckBoxes 'get set' : 
+    Boolean ShowPath 'get set' : 
+    System.String Text 'get set' : 
+    Boolean ThreeState 'get set' : 
+    ComboTreeNode FirstVisibleNode 'get set' : 
+    Boolean UseNodeNamesForPath 'get set' : 
+    Int32 VisibleCount 'get ' : 
+  Events:
+    System.EventHandler SelectedNodeChanged: 
+    System.EventHandler`1[ComboTreeNodeEventArgs] AfterCheck: 
+  Methods:
+    get_AllNodes(): PrivateScope, Public, HideBySig, SpecialName
+    get_CascadeCheckState(): PrivateScope, Public, HideBySig, SpecialName
+    set_CascadeCheckState(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_CheckedNodes(): PrivateScope, Public, HideBySig, SpecialName
+    set_CheckedNodes(IEnumerable`1): PrivateScope, Public, HideBySig, SpecialName
+    get_CheckedNodeSeparator(): PrivateScope, Public, HideBySig, SpecialName
+    set_CheckedNodeSeparator(String): PrivateScope, Public, HideBySig, SpecialName
+    get_DropDownHeight(): PrivateScope, Public, HideBySig, SpecialName
+    set_DropDownHeight(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DropDownWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_DropDownWidth(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DroppedDown(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_DroppedDown(Boolean): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_ExpandedImageIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_ExpandedImageIndex(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ExpandedImageKey(): PrivateScope, Public, HideBySig, SpecialName
+    set_ExpandedImageKey(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ImageIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_ImageIndex(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ImageKey(): PrivateScope, Public, HideBySig, SpecialName
+    set_ImageKey(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Images(): PrivateScope, Public, HideBySig, SpecialName
+    set_Images(ImageList): PrivateScope, Public, HideBySig, SpecialName
+    get_Nodes(): PrivateScope, Public, HideBySig, SpecialName
+    set_Nodes(ComboTreeNodeCollection): PrivateScope, Public, HideBySig, SpecialName
+    get_NullValue(): PrivateScope, Public, HideBySig, SpecialName
+    set_NullValue(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Path(): PrivateScope, Public, HideBySig, SpecialName
+    set_Path(String): PrivateScope, Public, HideBySig, SpecialName
+    get_PathSeparator(): PrivateScope, Public, HideBySig, SpecialName
+    set_PathSeparator(String): PrivateScope, Public, HideBySig, SpecialName
+    get_SelectedNode(): PrivateScope, Public, HideBySig, SpecialName
+    set_SelectedNode(ComboTreeNode): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowCheckBoxes(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowCheckBoxes(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowPath(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowPath(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Text(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Text(String): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_ThreeState(): PrivateScope, Public, HideBySig, SpecialName
+    set_ThreeState(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_FirstVisibleNode(): PrivateScope, Public, HideBySig, SpecialName
+    set_FirstVisibleNode(ComboTreeNode): PrivateScope, Public, HideBySig, SpecialName
+    get_UseNodeNamesForPath(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseNodeNamesForPath(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_VisibleCount(): PrivateScope, Public, HideBySig, SpecialName
+    add_SelectedNodeChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_SelectedNodeChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_AfterCheck(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_AfterCheck(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    BeginUpdate(): PrivateScope, Public, HideBySig
+    CollapseAll(): PrivateScope, Public, HideBySig
+    EndUpdate(): PrivateScope, Public, HideBySig
+    ExpandAll(): PrivateScope, Public, HideBySig
+    GetFullPath(ComboTreeNode): PrivateScope, Public, HideBySig
+    GetNodeAt(String): PrivateScope, Public, HideBySig
+    Sort(): PrivateScope, Public, HideBySig
+    Sort(IComparer`1): PrivateScope, Public, HideBySig
+Class ComboTreeDropDown: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.ToolStripDropDown
+    Void .ctor(ComboTreeBox): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 DropDownHeight 'get set' : 
+    Int32 DropDownWidth 'get set' : 
+    ComboTreeNode TopNode 'get set' : 
+    Int32 VisibleCount 'get ' : 
+  Methods:
+    get_DropDownHeight(): PrivateScope, Public, HideBySig, SpecialName
+    set_DropDownHeight(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DropDownWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_DropDownWidth(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_TopNode(): PrivateScope, Public, HideBySig, SpecialName
+    set_TopNode(ComboTreeNode): PrivateScope, Public, HideBySig, SpecialName
+    get_VisibleCount(): PrivateScope, Public, HideBySig, SpecialName
+    Open(): PrivateScope, Public, HideBySig
+    ScrollDropDown(Int32): PrivateScope, Public, HideBySig
+Class ComboTreeNode: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IComparable`1[ComboTreeNode]
+  Properties:
+    ComboTreeNode Parent 'get set' : 
+    System.String Text 'get set' : 
+    System.Drawing.FontStyle FontStyle 'get set' : 
+    Int32 ImageIndex 'get set' : 
+    System.String ImageKey 'get set' : 
+    Boolean Expanded 'get set' : 
+    Int32 ExpandedImageIndex 'get set' : 
+    System.String ExpandedImageKey 'get set' : 
+    ComboTreeNodeCollection Nodes 'get ' : 
+    System.String Name 'get set' : 
+    Int32 Depth 'get ' : 
+    System.Windows.Forms.CheckState CheckState 'get set' : 
+    Boolean Checked 'get set' : 
+    System.Object Tag 'get set' : 
+    System.String ToolTip 'get set' : 
+  Methods:
+    get_Parent(): PrivateScope, Public, HideBySig, SpecialName
+    get_Text(): PrivateScope, Public, HideBySig, SpecialName
+    set_Text(String): PrivateScope, Public, HideBySig, SpecialName
+    get_FontStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_FontStyle(FontStyle): PrivateScope, Public, HideBySig, SpecialName
+    get_ImageIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_ImageIndex(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ImageKey(): PrivateScope, Public, HideBySig, SpecialName
+    set_ImageKey(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Expanded(): PrivateScope, Public, HideBySig, SpecialName
+    set_Expanded(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ExpandedImageIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_ExpandedImageIndex(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ExpandedImageKey(): PrivateScope, Public, HideBySig, SpecialName
+    set_ExpandedImageKey(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Nodes(): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Depth(): PrivateScope, Public, HideBySig, SpecialName
+    get_CheckState(): PrivateScope, Public, HideBySig, SpecialName
+    set_CheckState(CheckState): PrivateScope, Public, HideBySig, SpecialName
+    get_Checked(): PrivateScope, Public, HideBySig, SpecialName
+    set_Checked(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Tag(): PrivateScope, Public, HideBySig, SpecialName
+    set_Tag(Object): PrivateScope, Public, HideBySig, SpecialName
+    get_ToolTip(): PrivateScope, Public, HideBySig, SpecialName
+    set_ToolTip(String): PrivateScope, Public, HideBySig, SpecialName
+    GetFullPath(String, Boolean): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    CompareTo(ComboTreeNode): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class ComboTreeNodeEventArgs: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(ComboTreeNode): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ComboTreeNode Node 'get set' : 
+  Methods:
+    get_Node(): PrivateScope, Public, HideBySig, SpecialName
+Class ComboTreeNodeCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.Collections.Generic.IList`1[ComboTreeNode]
+    System.Collections.Generic.ICollection`1[ComboTreeNode]
+    System.Collections.Generic.IEnumerable`1[ComboTreeNode]
+    System.Collections.IEnumerable
+    System.Collections.IList
+    System.Collections.ICollection
+    System.Collections.Specialized.INotifyCollectionChanged
+  Properties:
+    ComboTreeNode Item [System.String] 'get ' : 
+    Int32 Count 'get ' : 
+    ComboTreeNode Item [Int32] 'get set' : 
+  Events:
+    System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged: 
+  Methods:
+    get_Item(String): PrivateScope, Public, HideBySig, SpecialName
+    Add(String): PrivateScope, Public, HideBySig
+    Add(String, String): PrivateScope, Public, HideBySig
+    AddRange(IEnumerable`1): PrivateScope, Public, HideBySig
+    ContainsKey(String): PrivateScope, Public, HideBySig
+    Remove(String): PrivateScope, Public, HideBySig
+    IndexOf(String): PrivateScope, Public, HideBySig
+    Find(String, StringComparison, Boolean): PrivateScope, Public, HideBySig
+    Add(ComboTreeNode): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Clear(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Contains(ComboTreeNode): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Count(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    CopyTo(ComboTreeNode[], Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Remove(ComboTreeNode): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Item(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Item(Int32, ComboTreeNode): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IndexOf(ComboTreeNode): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Insert(Int32, ComboTreeNode): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    RemoveAt(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    add_CollectionChanged(NotifyCollectionChangedEventHandler): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    remove_CollectionChanged(NotifyCollectionChangedEventHandler): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class DropDownControls.DropDownColumnBase: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :System.Windows.Forms.DataGridViewColumn
+Class DropDownControls.ComboTreeBoxColumn: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DropDownControls.DropDownColumnBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 ExpandedImageIndex 'get set' : 
+    System.String ExpandedImageKey 'get set' : 
+    Int32 ImageIndex 'get set' : 
+    System.String ImageKey 'get set' : 
+    System.Windows.Forms.ImageList Images 'get set' : 
+    ComboTreeNodeCollection Nodes 'get set' : 
+    System.String PathSeparator 'get set' : 
+    Boolean ShowPath 'get set' : 
+    Boolean UseNodeNamesForPath 'get set' : 
+  Methods:
+    get_ExpandedImageIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_ExpandedImageIndex(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ExpandedImageKey(): PrivateScope, Public, HideBySig, SpecialName
+    set_ExpandedImageKey(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ImageIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_ImageIndex(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ImageKey(): PrivateScope, Public, HideBySig, SpecialName
+    set_ImageKey(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Images(): PrivateScope, Public, HideBySig, SpecialName
+    set_Images(ImageList): PrivateScope, Public, HideBySig, SpecialName
+    get_Nodes(): PrivateScope, Public, HideBySig, SpecialName
+    get_PathSeparator(): PrivateScope, Public, HideBySig, SpecialName
+    set_PathSeparator(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowPath(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowPath(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UseNodeNamesForPath(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseNodeNamesForPath(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    Clone(): PrivateScope, Public, Virtual, HideBySig
+Class DropDownControls.DropDownCellBase: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :System.Windows.Forms.DataGridViewCell
+Class DropDownControls.ComboTreeBoxCell: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DropDownControls.DropDownCellBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ComboTreeNodeCollection Nodes 'get ' : 
+    Boolean UseColumnNodes 'get set' : 
+    System.Type EditType 'get ' : 
+    System.Type FormattedValueType 'get ' : 
+  Methods:
+    get_Nodes(): PrivateScope, Public, HideBySig, SpecialName
+    get_UseColumnNodes(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseColumnNodes(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_EditType(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_FormattedValueType(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    ParseFormattedValue(Object, DataGridViewCellStyle, TypeConverter, TypeConverter): PrivateScope, Public, Virtual, HideBySig
+    Clone(): PrivateScope, Public, Virtual, HideBySig
+    InitializeEditingControl(Int32, Object, DataGridViewCellStyle): PrivateScope, Public, Virtual, HideBySig
+Class DropDownControls.GroupedComboBoxColumn: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DropDownControls.DropDownColumnBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String DisplayMember 'get set' : 
+    System.String ValueMember 'get set' : 
+    System.String GroupMember 'get set' : 
+    System.Object DataSource 'get set' : 
+  Methods:
+    get_DisplayMember(): PrivateScope, Public, HideBySig, SpecialName
+    set_DisplayMember(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ValueMember(): PrivateScope, Public, HideBySig, SpecialName
+    set_ValueMember(String): PrivateScope, Public, HideBySig, SpecialName
+    get_GroupMember(): PrivateScope, Public, HideBySig, SpecialName
+    set_GroupMember(String): PrivateScope, Public, HideBySig, SpecialName
+    get_DataSource(): PrivateScope, Public, HideBySig, SpecialName
+    set_DataSource(Object): PrivateScope, Public, HideBySig, SpecialName
+    Clone(): PrivateScope, Public, Virtual, HideBySig
+Class DropDownControls.GroupedComboBoxCell: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DropDownControls.DropDownCellBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String DisplayMember 'get set' : 
+    System.String ValueMember 'get set' : 
+    System.String GroupMember 'get set' : 
+    System.Object DataSource 'get set' : 
+    System.Type EditType 'get ' : 
+    System.Type FormattedValueType 'get ' : 
+  Methods:
+    get_DisplayMember(): PrivateScope, Public, HideBySig, SpecialName
+    set_DisplayMember(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ValueMember(): PrivateScope, Public, HideBySig, SpecialName
+    set_ValueMember(String): PrivateScope, Public, HideBySig, SpecialName
+    get_GroupMember(): PrivateScope, Public, HideBySig, SpecialName
+    set_GroupMember(String): PrivateScope, Public, HideBySig, SpecialName
+    get_DataSource(): PrivateScope, Public, HideBySig, SpecialName
+    set_DataSource(Object): PrivateScope, Public, HideBySig, SpecialName
+    get_EditType(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_FormattedValueType(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    ParseFormattedValue(Object, DataGridViewCellStyle, TypeConverter, TypeConverter): PrivateScope, Public, Virtual, HideBySig
+    Clone(): PrivateScope, Public, Virtual, HideBySig
+    InitializeEditingControl(Int32, Object, DataGridViewCellStyle): PrivateScope, Public, Virtual, HideBySig
+Class GroupedComboBox: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.ComboBox
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.IComparer
+  Properties:
+    System.Object DataSource 'get set' : 
+    System.Windows.Forms.DrawMode DrawMode 'get ' : 
+    System.String GroupMember 'get set' : 
+    System.Collections.IComparer SortComparer 'get set' : 
+  Methods:
+    get_DataSource(): PrivateScope, Public, HideBySig, SpecialName
+    set_DataSource(Object): PrivateScope, Public, HideBySig, SpecialName
+    get_DrawMode(): PrivateScope, Public, HideBySig, SpecialName
+    get_GroupMember(): PrivateScope, Public, HideBySig, SpecialName
+    set_GroupMember(String): PrivateScope, Public, HideBySig, SpecialName
+    get_SortComparer(): PrivateScope, Public, HideBySig, SpecialName
+    set_SortComparer(IComparer): PrivateScope, Public, HideBySig, SpecialName
+Class DropDownPaintEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.PaintEventArgs
+    Void .ctor(System.Drawing.Graphics, System.Drawing.Rectangle, System.Drawing.Rectangle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Drawing.Rectangle Bounds 'get set' : 
+  Methods:
+    get_Bounds(): PrivateScope, Public, HideBySig, SpecialName
+    DrawFocusRectangle(): PrivateScope, Public, HideBySig

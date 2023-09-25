@@ -1,0 +1,10 @@
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\x64\Debug\datagridtreeview.vcxproj.AssemblyReference.cache
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\x64\Debug\datagridtreeview.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\x64\Debug\datagridtreeview.MyForm.resources
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\x64\Debug\datagridtreeview.vcxproj.GenerateResource.cache
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\x64\Debug\datagridtreeview.vcxproj.CopyComplete
+C:\Users\facebook1\source\repos\datagridtreeview\datagridtreeview\x64\Debug\datagridtreeview.vcxproj.AssemblyReference.cache
+C:\Users\facebook1\source\repos\datagridtreeview\datagridtreeview\x64\Debug\datagridtreeview.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\facebook1\source\repos\datagridtreeview\datagridtreeview\x64\Debug\datagridtreeview.MyForm.resources
+C:\Users\facebook1\source\repos\datagridtreeview\datagridtreeview\x64\Debug\datagridtreeview.vcxproj.GenerateResource.cache
+C:\Users\facebook1\source\repos\datagridtreeview\datagridtreeview\x64\Debug\datagridtreeview.vcxproj.CopyComplete

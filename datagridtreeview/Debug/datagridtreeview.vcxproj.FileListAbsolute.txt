@@ -1,0 +1,5 @@
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\Debug\datagridtreeview.vcxproj.AssemblyReference.cache
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\Debug\datagridtreeview.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\Debug\datagridtreeview.MyForm.resources
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\Debug\datagridtreeview.vcxproj.GenerateResource.cache
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\Debug\datagridtreeview.vcxproj.CopyComplete

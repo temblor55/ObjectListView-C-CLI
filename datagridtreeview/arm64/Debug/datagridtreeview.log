@@ -1,0 +1,7 @@
+﻿  MyForm.cpp
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\MyForm.h(129,17): error C2440: '=': cannot convert from 'const wchar_t [7]' to 'BrightIdeasSoftware::OLVColumn ^'
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\MyForm.h(129,17): message : Reason: cannot convert from 'const wchar_t *' to 'BrightIdeasSoftware::OLVColumn ^'
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\MyForm.h(129,17): message : No user-defined-conversion operator available, or
+C:\Users\Poco_F1\source\repos\datagridtreeview\datagridtreeview\MyForm.h(129,17): message : Cannot convert a native type to a managed type
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...

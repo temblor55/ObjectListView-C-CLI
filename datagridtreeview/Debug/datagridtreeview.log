@@ -1,0 +1,5 @@
+﻿  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  MyForm.cpp
+  Generating Code...
+  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  datagridtreeview.vcxproj -> C:\Users\Poco_F1\source\repos\datagridtreeview\Debug\datagridtreeview.exe
