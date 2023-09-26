@@ -132,9 +132,12 @@ namespace datagridtreeview {
 
 		   void InitializeData()
 		   {
-			   // Create fake nodes.
+			   // Create fake nodes
 			   Node^ parent1 = gcnew Node("PARENT1", "-", "-", "-");
-			   parent1->Children->Add(gcnew Node("CHILD_1_1", "A", "X", "1"));
+			   Node^ child1 = gcnew Node("CHILD_1_1", "A", "X", "1");
+			   parent1->Children->Add(child1);
+			   Node^ childChild1 = gcnew Node("CHILD_1_1_CHILD", "T", "R", "45");
+			   child1->Children->Add(childChild1);
 			   parent1->Children->Add(gcnew Node("CHILD_1_2", "A", "Y", "2"));
 			   parent1->Children->Add(gcnew Node("CHILD_1_3", "A", "Z", "3"));
 
@@ -147,6 +150,8 @@ namespace datagridtreeview {
 			   parent3->Children->Add(gcnew Node("CHILD_3_1", "C", "R", "10"));
 			   parent3->Children->Add(gcnew Node("CHILD_3_2", "C", "T", "12"));
 			   parent3->Children->Add(gcnew Node("CHILD_3_3", "C", "H", "14"));
+
+				
 
 			   data = gcnew List<Node^>();
 			   data->Add(parent1);
